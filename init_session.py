@@ -8,7 +8,7 @@ async def new_session(*, api_id: int, api_hash: str) -> None:
     session_name = input("Session name: ")
     async with Client(session_name, api_id, api_hash) as client:
         if await client.is_authorized():
-            print(f'Session {session_name} already authorized. Run __main__ to work with it. For new session, provide '
+            print(f'Session {session_name} already authorized. Run main to work with it. For new session, provide '
                   f'an unique name')
             return
         phone = input("Enter a phone number: ")
